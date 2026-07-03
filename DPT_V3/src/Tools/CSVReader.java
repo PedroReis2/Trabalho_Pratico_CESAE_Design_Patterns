@@ -1,4 +1,4 @@
-package tools;
+package Tools;
 
 import Models.*;
 
@@ -239,12 +239,12 @@ public class CSVReader {
         return reservationsList;
     }
 
-    public static ArrayList<Type> readCsvFileType(String filePath) throws FileNotFoundException {
+    public static ArrayList<RoomType> readCsvFileType(String filePath) throws FileNotFoundException {
 
         File ficheiro = new File(filePath);
         Scanner fileScanner = new Scanner(ficheiro);
 
-        ArrayList<Type> typesList = new ArrayList<Type>();
+        ArrayList<RoomType> typesList = new ArrayList<RoomType>();
 
         fileScanner.nextLine();
 
@@ -259,7 +259,7 @@ public class CSVReader {
 
 
 
-            Type roomType = new Type(id, description, pricePerWeek);
+            RoomType roomType = new RoomType(id, description, pricePerWeek);
             typesList.add(roomType);
 
         }
